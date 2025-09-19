@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+}
+
+/* Fondo general */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffa673, #ffe3bb, #78b9b5);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  -webkit-animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tarjeta del juego */
+.game-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+/* Título */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estado del juego */
+.status {
+  margin-bottom: 20px;
+}
+.turno {
+  font-size: 1.5rem;
+}
+.player {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.player-x {
+  color: #ef4444;
+}
+.player-o {
+  color: #3b82f6;
+}
+.winner {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #facc15;
+}
+.draw {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Tablero */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cell:hover:enabled {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+.cell:disabled {
+  cursor: not-allowed;
+}
+.cell.X {
+  color: #ef4444;
+}
+.cell.O {
+  color: #3b82f6;
+}
+
+/* Botón reiniciar */
+.btn-restart {
+  background: linear-gradient(to right, #22c55e, #3b82f6);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-restart:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.btn-restart:active {
+  transform: scale(0.95);
+}
